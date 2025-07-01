@@ -1,7 +1,5 @@
- Women-Safety
+# Women-Safety
  WomenSafe - Women's Safety Platform
-
-![WomenSafe Logo](https://via.placeholder.com/150x50?text=WomenSafe)
 
 A comprehensive web platform dedicated to women's safety, providing resources, emergency tools, and educational content.
 
