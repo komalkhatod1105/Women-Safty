@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Safety - Empowerment & Protection</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #ff4081;
+            --secondary-color: #9c27b0;
+            --dark-color: #673ab7;
+            --light-color: #e91e63;
+            --safe-color: #4caf50;
+            --warning-color: #ff9800;
+            --danger-color: #f44336;
+            --text-color: #333;
+            --light-text: #f5f5f5;
+            --section-bg: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--primary-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--dark-color), var(--secondary-color));
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .hero-btns .btn {
+            margin: 0 10px;
+        }
+        
+        .hero-btns .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+        }
+        
+        .hero-btns .btn-secondary:hover {
+            background: white;
+            color: var(--dark-color);
+        }
+        
+        /* Emergency Section */
+        .emergency-section {
+            padding: 80px 0;
+            background-color: #c3195d;
+            color: white;
+            text-align: center;
+        }
+        
+        .emergency-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .emergency-btn {
+            font-size: 1.5rem;
+            padding: 15px 40px;
+            background: white;
+            color: var(--danger-color);
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background-color: var(--section-bg);
+        }
+        
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        /* Safety Tips Section */
+        .safety-tips {
+            padding: 100px 0;
+        }
+        
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .tip-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tip-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .tip-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .tip-card:hover .tip-img img {
+            transform: scale(1.1);
+        }
+        
+        .tip-content {
+            padding: 25px;
+        }
+        
+        .tip-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .tip-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* Self Defense Section */
+        .self-defense {
+            padding: 100px 0;
+            background-color: var(--section-bg);
+        }
+        
+        .defense-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .defense-img {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .defense-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .defense-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .defense-content h2 {
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+        
+        .defense-content p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .defense-points {
+            margin-top: 30px;
+        }
+        
+        .defense-point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .point-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        /* Complaint Section */
+        .complaint {
+            padding: 100px 0;
+        }
+        
+        .complaint-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background: var(--secondary-color);
+        }
+        
+        /* Resources Section */
+        .resources {
+            padding: 100px 0;
+            background-color: var(--section-bg);
+        }
+        
+        .resources-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .resource-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .resource-img {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .resource-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .resource-content {
+            padding: 20px;
+        }
+        
+        .resource-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .resource-content p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+        }
+        
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-slide {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .testimonial-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid var(--section-bg);
+        }
+        
+        .testimonial-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--dark-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+        }
+        
+        .newsletter h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form input:focus {
+            outline: none;
+        }
+        
+        .newsletter-form button {
+            padding: 15px 30px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 50px 50px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .newsletter-form button:hover {
+            background: var(--light-color);
+        }
+        
+        /* Footer */
+        footer {
+            background: #222;
+            color: #ddd;
+            padding: 70px 0 0;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            color: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            background: #111;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 60px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 60px);
+                background: var(--dark-color);
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 30px;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .defense-container {
+                flex-direction: column;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 50px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 50px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .complaint-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Women<span>Safe</span></a>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#safety-tips">Safety Tips</a></li>
+                    <li><a href="#self-defense">Self Defense</a></li>
+                    <li><a href="#complaint">File Complaint</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Empowering Women Through Safety</h1>
+            <p>Your safety is our priority. Learn, protect and stand strong with our comprehensive women's safety resources and tools.</p>
+            <div class="hero-btns">
+                <a href="#safety-tips" class="btn">Learn Safety Tips</a>
+                <a href="#emergency" class="btn btn-secondary">Emergency Help</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="emergency-section" id="emergency">
+        <div class="container">
+            <h2>In Immediate Danger?</h2>
+            <p>Press the button below to alert emergency services and your trusted contacts</p>
+            <a href="#" class="emergency-btn"><i class="fas fa-bell"></i> EMERGENCY ALERT</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Safety Features</h2>
+                <p>We provide comprehensive tools and resources to ensure women's safety in all situations</p>
+            </div>
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Real-time Tracking</h3>
+                    <p>Share your live location with trusted contacts when you feel unsafe</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Emergency Alerts</h3>
+                    <p>One-tap emergency alerts to police and your emergency contacts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Safety Guides</h3>
+                    <p>Comprehensive guides for different situations and environments</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Support</h3>
+                    <p>Connect with other women for support and shared safety</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Legal Assistance</h3>
+                    <p>Access to legal resources and support for harassment cases</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Safe Routes</h3>
+                    <p>Find the safest routes for your commute with real-time updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="safety-tips" id="safety-tips">
+        <div class="container">
+            <div class="section-title">
+                <h2>Essential Safety Tips</h2>
+                <p>Practical advice to help you stay safe in various situations</p>
+            </div>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <div class="tip-img">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Safety at Night">
+                    </div>
+                    <div class="tip-content">
+                        <h3>Nighttime Safety</h3>
+                        <p>Learn how to protect yourself when traveling or walking alone at night with these essential tips.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-img">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Public Transport Safety">
+                    </div>
+                    <div class="tip-content">
+                        <h3>Public Transport Safety</h3>
+                        <p>Stay safe while using buses, trains, and other public transportation with these guidelines.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-img">
+                        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Online Safety">
+                    </div>
+                    <div class="tip-content">
+                        <h3>Online Safety</h3>
+                        <p>Protect yourself from cyberstalking, harassment, and other digital threats with these measures.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-img">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Workplace Safety">
+                    </div>
+                    <div class="tip-content">
+                        <h3>Workplace Safety</h3>
+                        <p>How to handle and prevent harassment in professional environments.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-img">
+                        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Travel Safety">
+                    </div>
+                    <div class="tip-content">
+                        <h3>Travel Safety</h3>
+                        <p>Essential precautions for women traveling alone or in unfamiliar places.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-img">
+                        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Dating Safety">
+                    </div>
+                    <div class="tip-content">
+                        <h3>Dating Safety</h3>
+                        <p>Stay safe when meeting new people through dating apps or social situations.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="self-defense" id="self-defense">
+        <div class="container">
+            <div class="defense-container">
+                <div class="defense-img">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Self Defense">
+                </div>
+                <div class="defense-content">
+                    <h2>Basic Self Defense Techniques</h2>
+                    <p>Learning basic self-defense can give you the confidence and skills to protect yourself in dangerous situations. Here are some fundamental techniques every woman should know:</p>
+                    
+                    <div class="defense-points">
+                        <div class="defense-point">
+                            <div class="point-icon">
+                                <i class="fas fa-fist-raised"></i>
+                            </div>
+                            <div>
+                                <h3>Target Vulnerable Areas</h3>
+                                <p>Aim for eyes, nose, throat, knees, and groin. Even a small person can inflict serious pain on these areas.</p>
+                            </div>
+                        </div>
+                        <div class="defense-point">
+                            <div class="point-icon">
+                                <i class="fas fa-hand-paper"></i>
+                            </div>
+                            <div>
+                                <h3>Palm Strike</h3>
+                                <p>Use the heel of your palm to strike the attacker's nose or chin. This can create distance to escape.</p>
+                            </div>
+                        </div>
+                        <div class="defense-point">
+                            <div class="point-icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <div>
+                                <h3>Escape First</h3>
+                                <p>Your primary goal should always be to escape, not to fight. Use techniques to create an opportunity to run.</p>
+                            </div>
+                        </div>
+                        <div class="defense-point">
+                            <div class="point-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <div>
+                                <h3>Make Noise</h3>
+                                <p>Yell "Fire!" instead of "Help!" as it draws more attention. Use a personal alarm if available.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn">Find Self Defense Classes Near You</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="complaint" id="complaint">
+        <div class="container">
+            <div class="section-title">
+                <h2>File a Complaint</h2>
+                <p>Report incidents of harassment, abuse, or any safety concerns anonymously or with your details</p>
+            </div>
+            <div class="complaint-form">
+                <form id="complaintForm">
+                    <div class="form-group">
+                        <label for="name">Your Name (Optional)</label>
+                        <input type="text" id="name" placeholder="If you wish to remain anonymous, leave this blank">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email (Optional)</label>
+                        <input type="email" id="email" placeholder="For follow-up communication">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone (Optional)</label>
+                        <input type="tel" id="phone" placeholder="For urgent cases">
+                    </div>
+                    <div class="form-group">
+                        <label for="incident-type">Type of Incident</label>
+                        <select id="incident-type">
+                            <option value="">Select incident type</option>
+                            <option value="harassment">Street Harassment</option>
+                            <option value="workplace">Workplace Harassment</option>
+                            <option value="domestic">Domestic Violence</option>
+                            <option value="cyber">Cyber Harassment</option>
+                            <option value="stalking">Stalking</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location of Incident</label>
+                        <input type="text" id="location" placeholder="Where did it happen?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date and Time</label>
+                        <input type="datetime-local" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Incident Description</label>
+                        <textarea id="description" placeholder="Please provide details of what happened" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="evidence">Evidence (Photos, Videos, etc.)</label>
+                        <input type="file" id="evidence" multiple>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="anonymous" checked> Submit anonymously
+                        </label>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Complaint</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="resources" id="resources">
+        <div class="container">
+            <div class="section-title">
+                <h2>Safety Resources</h2>
+                <p>Access helpful resources, organizations, and tools for women's safety</p>
+            </div>
+            <div class="resources-container">
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Helpline Numbers">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Emergency Helplines</h3>
+                        <p>List of national and local helpline numbers for immediate assistance in cases of harassment or violence.</p>
+                        <a href="#" class="btn">View Numbers</a>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Legal Rights">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Know Your Rights</h3>
+                        <p>Comprehensive guide to legal rights and protections for women against harassment and violence.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Support Groups">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Support Groups</h3>
+                        <p>Find local and online support groups for women who have experienced harassment or violence.</p>
+                        <a href="#" class="btn">Find Support</a>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-img">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Safety Apps">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Safety Apps</h3>
+                        <p>Review of the best personal safety apps with features like emergency alerts and location sharing.</p>
+                        <a href="#" class="btn">View Apps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Stories of Strength</h2>
+                <p>Hear from women who have empowered themselves through safety awareness</p>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial-slide">
+                    <div class="testimonial-img">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Priya K.">
+                    </div>
+                    <p class="testimonial-text">"After attending a self-defense workshop I found through this site, I felt so much more confident commuting to work. Two months later, I actually used what I learned to escape a dangerous situation. This knowledge truly saved me."</p>
+                    <p class="testimonial-author">- Priya K., Mumbai</p>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-img">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ananya S.">
+                    </div>
+                    <p class="testimonial-text">"The legal resources section helped me understand my rights when facing workplace harassment. With this information, I was able to file a proper complaint and get the situation resolved without losing my job."</p>
+                    <p class="testimonial-author">- Ananya S., Delhi</p>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-img">
+                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Maria L.">
+                    </div>
+                    <p class="testimonial-text">"I used the emergency alert feature when I was being followed late at night. Within minutes, my designated contacts knew my location and were able to guide me to safety. This service is a game-changer for women's safety."</p>
+                    <p class="testimonial-author">- Maria L., Bangalore</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Informed About Women's Safety</h2>
+            <p>Subscribe to our newsletter for the latest safety tips, self-defense techniques, and empowerment resources</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>WomenSafe</h3>
+                    <p>Empowering women through safety education, resources, and community support.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#safety-tips">Safety Tips</a></li>
+                        <li><a href="#self-defense">Self Defense</a></li>
+                        <li><a href="#complaint">File Complaint</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Emergency Contacts</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:100">Police: 100</a></li>
+                        <li><a href="tel:1091">Women Helpline: 1091</a></li>
+                        <li><a href="tel:181">Domestic Abuse: 181</a></li>
+                        <li><a href="tel:1098">Child Protection: 1098</a></li>
+                        <li><a href="tel:102">Ambulance: 102</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Safety Avenue, Mumbai, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@womensafe.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 WomenSafe. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        
+        const mobileMenuBtn = document.querySelector('.mobile-menu');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        const complaintForm = document.getElementById('complaintForm');
+        if (complaintForm) {
+            complaintForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your complaint. We take all reports seriously and will review your submission promptly.');
+                this.reset();
+            });
+        }
+
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = this.querySelector('input[type="email"]');
+                alert Thank you for subscribing with ${emailInput.value}! ('You will receive our next newsletter soon.');
+                emailInput.value = '';
+            });
+        }
+
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-slide');
+        
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.style.display = i === index ? 'block' : 'none';
+            });
+        }
+        
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+        
+       
+        if (testimonials.length > 0) {
+            showTestimonial(0);
+            setInterval(nextTestimonial, 5000);
+        }
+        
+       
+        const emergencyBtn = document.querySelector('.emergency-btn');
+        if (emergencyBtn) {
+            emergencyBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (confirm('Are you in immediate danger? This will alert emergency services and your trusted contacts.')) {
+                    
+                    alert('Emergency alert activated! Help is on the way. Stay on the line if possible.');
+                    
+                    setTimeout(() => {
+                        alert('Emergency services have been notified of your location. Stay safe!');
+                    }, 2000);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
